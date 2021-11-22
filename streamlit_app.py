@@ -68,9 +68,6 @@ if img_file_buffer is not None:
     # Loads image in a BGR channel order.
     image = cv2.imdecode(raw_bytes, cv2.IMREAD_COLOR)
 
-    # Or use PIL Image (which uses an RGB channel order)
-    # image = np.array(Image.open(img_file_buffer))
-
     # Create placeholders to display input and output images.
     placeholder1, placeholder2 = st.columns(2)
     
