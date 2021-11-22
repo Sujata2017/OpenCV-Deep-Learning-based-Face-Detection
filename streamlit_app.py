@@ -73,11 +73,11 @@ if img_file_buffer is not None:
 
     # Create placeholders to display input and output images.
     placeholder1, placeholder2 = st.columns(2)
+    
     # Display Input image in the first placeholder.
     placeholder1.image(image, channels='BGR')
     placeholder1.text("Input Image")
-    #placeholders[0].image(image, channels='BGR')
-    #placeholders[0].text("Input Image")
+    
 
     # Create a Slider and get the threshold from the slider.
     conf_threshold = st.slider("SET Confidence Threshold", min_value=0.0, max_value=1.0, step=.01, value=0.5)
@@ -91,8 +91,7 @@ if img_file_buffer is not None:
     # Display Detected faces.
     placeholder2.image(out_image, channels='BGR')
     placeholder2.text("Output Image")
-    #placeholders[1].image(out_image, channels='BGR')
-    #placeholders[1].text("Output Image")
+   
 
     # Convert opencv image to PIL.
     out_image = Image.fromarray(out_image[:, :, ::-1])
