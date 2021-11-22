@@ -7,7 +7,7 @@ import base64
 
 # Create application title and file uploader widget.
 st.title("OpenCV Deep Learning based Face Detection")
-st.title(f'My first app {st.__version__}')
+st.title(f'My app {st.__version__}')
 img_file_buffer = st.file_uploader("Choose a file", type=['jpg', 'jpeg', 'png'])
 
 
